@@ -1,0 +1,7 @@
+# Copyright 2021 Alvaro
+# See LICENSE file for licensing details.
+name: charm-k8s-influxdb
+description: |
+  TODO: fill out the charm's description
+summary: |
+  TODO: fill out the charm's summary
