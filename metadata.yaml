@@ -1,7 +1,38 @@
-# Copyright 2021 Alvaro
+# Copyright 2021 Canonical Ltd.
 # See LICENSE file for licensing details.
-name: charm-k8s-influxdb
+name: influxdb2
+summary: Scalable Time Series DB
+maintainers:
+  - InfluxDB Charmers <influxdb-charmers@lists.launchpad.net>
 description: |
-  TODO: fill out the charm's description
-summary: |
-  TODO: fill out the charm's summary
+  Scalable Time Series DB
+tags:
+  - database
+  - monitoring
+  - observability
+
+provides:
+  admin:
+    interface: http
+  grafana-source:
+    interface: grafana-datasource
+  query:
+    interface: influxdb-api
+
+containers:
+  influxdb2:
+    resource: influxdb2-image
+    mounts:
+      - storage: data
+        location: /var/lib/influxdbv2
+
+resources:
+  influxdb2-image:
+    type: oci-image
+    description: Docker image for influxdb
+
+storage:
+  data:
+    type: filesystem
+    description: time series store
+    minimum-size: 10G

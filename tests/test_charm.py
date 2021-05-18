@@ -5,7 +5,7 @@ import unittest
 from unittest.mock import Mock
 
 from ops.testing import Harness
-from charm import CharmK8SInfluxdbCharm
+from charm import KubernetesInfluxdbCharm
 
 
 class TestCharm(unittest.TestCase):
