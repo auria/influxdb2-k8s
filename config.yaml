@@ -1,4 +1,7 @@
 # Copyright 2021 Canonical
 # See LICENSE file for licensing details.
 options:
-
+  port:
+    description: The port influxdb will be listening on ([WIP] not used by the charm)
+    type: int
+    default: 8086

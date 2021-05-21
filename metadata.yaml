@@ -1,6 +1,6 @@
 # Copyright 2021 Canonical Ltd.
 # See LICENSE file for licensing details.
-name: influxdb2
+name: influxdb2-k8s
 summary: Scalable Time Series DB
 maintainers:
   - InfluxDB Charmers <influxdb-charmers@lists.launchpad.net>
@@ -14,10 +14,12 @@ tags:
 provides:
   admin:
     interface: http
+  query:
+    interface: influxdb2-api
+
+requires:
   grafana-source:
     interface: grafana-datasource
-  query:
-    interface: influxdb-api
 
 containers:
   influxdb2:
