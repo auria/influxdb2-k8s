@@ -61,7 +61,7 @@ class KubernetesInfluxdbCharm(CharmBase):
             return
 
         # If the service is INACTIVE, then skip this step
-        if self._is_running(container, WORKLOAD_CONTAINER):
+        if self._is_running(container, WORKLOAD_CONTAINER):  # pragma: no cover
             container.stop(WORKLOAD_CONTAINER)
         container.start(WORKLOAD_CONTAINER)
         self.unit.status = ActiveStatus("Pod is ready")
@@ -124,5 +124,5 @@ class KubernetesInfluxdbCharm(CharmBase):
             return False
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main(KubernetesInfluxdbCharm)

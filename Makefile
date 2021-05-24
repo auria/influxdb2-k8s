@@ -34,7 +34,7 @@ functional: build
 
 clean:
 	@echo "Cleaning files"
-	@git clean -fXd -e '!.idea'
+	@git clean -fxd -e '!.idea'
 	@echo "Cleaning existing build"
 	@rm -rf ${CHARM_BUILD_DIR}/${CHARM_NAME}
 
