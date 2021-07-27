@@ -1,5 +1,5 @@
-description: An influxdb2-k8s unit running on Kubernetes
+description: An influxdb2 unit running on Kubernetes
 applications:
-  influxdb2-k8s:
-    charm: ../charms/influxdb2-k8s.charm
+  influxdb2:
+    charm: ../charms/influxdb2.charm
     num_units: 1

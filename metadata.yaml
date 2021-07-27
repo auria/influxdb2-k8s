@@ -1,6 +1,6 @@
 # Copyright 2021 Canonical Ltd.
 # See LICENSE file for licensing details.
-name: influxdb2-k8s
+name: influxdb2
 summary: Scalable Time Series DB
 maintainers:
   - InfluxDB Charmers <influxdb-charmers@lists.launchpad.net>

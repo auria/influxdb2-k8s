@@ -25,7 +25,7 @@ async def test_build_and_deploy(ops_test: OpsTest) -> None:
 async def test_status_messages(ops_test: OpsTest) -> None:
     """Validate that the status messages are correct."""
     expected_messages: Dict[str, str] = {
-        "influxdb2-k8s": "Pod is ready",
+        "influxdb2": "Pod is ready",
     }
     for app, message in expected_messages.items():
         for unit in ops_test.model.applications[app].units:
